@@ -154,6 +154,18 @@ audio.addEventListener("timeupdate", () => {
     : minute}: ${second < 10 ? "0" + second : second}`
 })
 
+audio.addEventListener("ended", () => {
+  if (index === data.length - 1) {
+    index = 0
+  }
+  else {
+    index++;
+  }
+  musicPlay();
+  activeMusic();
+  scrollbar.value = 0;
+})
+
 scrollbar.addEventListener("input", () => {
   lastDuration = scrollbar.value;
   audio.currentTime = scrollbar.value;
