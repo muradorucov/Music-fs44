@@ -87,7 +87,6 @@ data.forEach((music, i) => {
         <div class="info">
           <p title="${music.author}">${music.author.slice(0, 10)}...</p>
           <p title="${music.title}">${music.title.slice(0, 10)}...</p>
-          <p class="time">04 : 05 </p>
         </div>
       </div>
 `
